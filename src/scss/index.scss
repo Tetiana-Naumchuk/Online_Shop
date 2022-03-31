@@ -1,0 +1,17 @@
+@import './helpers/reset';
+@import './helpers/variables';
+@import './helpers/mixins';
+
+* {
+	box-sizing: border-box;
+}
+body {
+	font-family: $fontFamily;
+}
+.container {
+	max-width: 1169px;
+	margin: 0 auto;
+	padding-inline: 5px;
+}
+
+@import './sections/style';

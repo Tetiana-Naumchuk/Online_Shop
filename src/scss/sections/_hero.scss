@@ -1,0 +1,407 @@
+.hero {
+	.img-big-ellipse {
+		position: absolute;
+		right: 0px;
+		top: 190px;
+		@include for-size(tablet) {
+			max-width: 410px;
+			top: 200px;
+		}
+		@include for-size(phone) {
+			max-width: 184px;
+			top: 88px;
+		}
+	}
+	&__header {
+		max-height: 95px;
+		background: #67aefc;
+		@include for-size(phone) {
+			max-height: 49px;
+		}
+		.header-logo {
+			&__wrapper {
+				@include flex($horizontal: flex-start);
+			}
+			&__right {
+				position: relative;
+			}
+			&__right-figure {
+				@include for-size(phone) {
+					max-width: 21px;
+				}
+			}
+			&__right-quotes {
+				position: absolute;
+				right: 18px;
+				bottom: 10px;
+				@include for-size(phone) {
+					max-height: 20px;
+					right: 7px;
+					bottom: 6px;
+				}
+			}
+			&__left {
+				position: relative;
+				margin-right: 6px;
+			}
+			&__left-figure {
+				padding-top: 30px;
+				margin-left: -10px;
+				@include for-size(phone) {
+					max-width: 21px;
+					padding-top: 20px;
+				}
+			}
+			&__left-quotes {
+				position: absolute;
+				left: 10px;
+				bottom: 10px;
+				@include for-size(phone) {
+					max-height: 20px;
+					left: 0px;
+					bottom: 4px;
+				}
+			}
+			&__text {
+				padding-top: 15px;
+				padding-right: 285px;
+				@include for-size(tablet) {
+					display: flex;
+					padding-right: 75px;
+				}
+				@include for-size(phone) {
+					display: none;
+				}
+			}
+			&__text-mob {
+				display: none;
+				@include for-size(phone) {
+					display: block;
+					padding-right: 100px;
+				}
+			}
+		}
+		.nav-menu {
+			&__list {
+				@include flex($horizontal: flex-end);
+				@include for-size(phone) {
+					display: none;
+				}
+			}
+			&__item {
+				padding-right: 36px;
+				@include for-size(tablet) {
+					padding-right: 10px;
+				}
+			}
+			&__item:last-child {
+				padding-right: 30px;
+				@include for-size(tablet) {
+					padding-right: 7px;
+				}
+			}
+			&__link {
+				font-family: $fontFamily;
+				font-style: normal;
+				font-weight: 600;
+				font-size: 16px;
+				line-height: 20px;
+				color: $whiteColor;
+				cursor: pointer;
+				@include for-size(tablet) {
+					font-size: 14px;
+				}
+			}
+		}
+
+		.hamburger-menu {
+			display: none;
+			position: relative;
+			@include for-size(phone) {
+				display: block;
+			}
+			.toggle {
+				width: 13px;
+				height: 13px;
+				background-color: $whiteColor;
+				border-radius: 50%;
+				position: relative;
+			}
+			.toggle::after {
+				content: '';
+				width: 13px;
+				height: 13px;
+				background-color: $whiteColor;
+				border-radius: 50%;
+				top: 0px;
+				left: 15px;
+				position: absolute;
+			}
+			.toggle::before {
+				content: '';
+				width: 13px;
+				height: 13px;
+				background-color: $whiteColor;
+				border-radius: 50%;
+				top: 0px;
+				left: 30px;
+				position: absolute;
+			}
+			.menu {
+				&__list {
+					position: absolute;
+					right: -14px;
+					top: 36px;
+					width: 250px;
+					height: 270px;
+					background: rgba(103, 174, 252, 0.95);
+					z-index: 3;
+					display: none;
+				}
+				&__list-is-active {
+					display: block;
+					transition-duration: 0.25s;
+				}
+				&__item {
+					padding-top: 33px;
+				}
+				&__link {
+					@include flex;
+					font-family: $fontFamily;
+					font-style: normal;
+					font-weight: 800;
+					font-size: 17px;
+					line-height: 27px;
+					text-transform: uppercase;
+					color: $whiteColor;
+					cursor: pointer;
+				}
+				&__link:active {
+					text-decoration: underline;
+				}
+			}
+		}
+
+		.header-button {
+			&__btn {
+				border: none;
+				font-family: $fontFamily;
+				font-style: normal;
+				font-weight: 700;
+				font-size: 15px;
+				text-transform: uppercase;
+				color: $whiteColor;
+				padding: 10px 40px;
+				background: $greenColor;
+				border-radius: 5px;
+				@include for-size(tablet) {
+					font-size: 12px;
+				}
+				@include for-size(phone) {
+					display: none;
+				}
+			}
+			&__btn:hover {
+				cursor: pointer;
+				border: 2px solid $whiteColor;
+				padding: 9px 39px;
+				@include for-size(tablet) {
+					background: $whiteColor;
+					color: #67aefc;
+				}
+			}
+		}
+	}
+}
+.main {
+	background: $whiteColor;
+	.hero-main {
+		&__title {
+			margin-top: 171px;
+			font-family: $fontFamily;
+			font-style: normal;
+			font-weight: 900;
+			font-size: 50px;
+			line-height: 125%;
+			color: #484848;
+			@include for-size(tablet) {
+				font-size: 35px;
+			}
+			@include for-size(phone) {
+				margin-top: 337px;
+				font-size: 27px;
+			}
+		}
+		&__text {
+			margin-top: 20px;
+			font-family: $fontFamily;
+			font-style: normal;
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 140%;
+			color: #000000;
+			@include for-size(tablet) {
+				font-size: 14px;
+			}
+		}
+		&__button {
+			margin-top: 58px;
+			@include for-size(phone) {
+				margin-top: 34px;
+				display: flex;
+				justify-content: center;
+			}
+		}
+		&__button-btn {
+			padding: 22px 92px;
+			background: $greenColor;
+			border-radius: 5px;
+			font-family: $fontFamily;
+			font-style: normal;
+			font-weight: 700;
+			font-size: 15px;
+			text-transform: uppercase;
+			color: $whiteColor;
+			border: none;
+			margin-bottom: 180px;
+			@include for-size(phone) {
+				margin-bottom: 51px;
+			}
+		}
+		&__button-btn:hover {
+			@include hover-btn;
+			@include for-size(tablet) {
+				background: #67aefc;
+			}
+		}
+		&__img-shop {
+			position: absolute;
+			right: 30px;
+			top: 0px;
+			max-width: 509px;
+			z-index: 1;
+			@include for-size(tablet) {
+				max-width: 350px;
+				top: 20px;
+			}
+			@include for-size(phone) {
+				display: none;
+			}
+		}
+		&__img-shop-mob {
+			display: none;
+			@include for-size(phone) {
+				display: block;
+				top: -273px;
+				right: 25%;
+				position: absolute;
+			}
+		}
+		&__img-sphere1 {
+			position: absolute;
+			right: -36px;
+			bottom: 296px;
+			@include for-size(tablet) {
+				display: none;
+			}
+		}
+		&__img-sphere3 {
+			position: absolute;
+			right: -122px;
+			bottom: 370px;
+			@include for-size(tablet) {
+				display: none;
+			}
+			@include for-size(phone) {
+				display: block;
+				bottom: 162px;
+				right: 45px;
+				width: 15px;
+			}
+		}
+		&__img-violer-wave {
+			position: absolute;
+			right: -72px;
+			bottom: 390px;
+			z-index: 2;
+			@include for-size(tablet) {
+				left: 50%;
+				bottom: 30%;
+				max-width: 120px;
+			}
+			@include for-size(phone) {
+				left: 68%;
+				top: -12%;
+				max-width: 67px;
+			}
+		}
+		&__img-blue-wave {
+			position: absolute;
+			right: 390px;
+			bottom: 270px;
+			@include for-size(tablet) {
+				display: none;
+			}
+		}
+		&__img-cylinder-pink {
+			position: absolute;
+			right: -88px;
+			bottom: 102px;
+			@include for-size(tablet) {
+				display: none;
+			}
+		}
+		&__img-cylinder-blue {
+			position: absolute;
+			right: 250px;
+			top: -40px;
+			@include for-size(phone) {
+				top: -70%;
+				left: 35%;
+				max-width: 47px;
+			}
+		}
+		&__img-sphere2 {
+			position: absolute;
+			left: -120px;
+			top: -60px;
+			@include for-size(tablet) {
+				left: 50px;
+				top: -100px;
+			}
+			@include for-size(phone) {
+				display: none;
+			}
+		}
+		&__img-ellipse {
+			position: absolute;
+			left: -376px;
+			bottom: 40px;
+			@include for-size(tablet) {
+				left: 0px;
+				bottom: 0px;
+				max-width: 120px;
+			}
+			@include for-size(phone) {
+				display: none;
+			}
+		}
+		&__img-ellipse-mob {
+			display: none;
+			position: absolute;
+			@include for-size(phone) {
+				display: block;
+				top: -310px;
+				left: 0px;
+			}
+		}
+		&__img-violet-wave-little {
+			position: absolute;
+			left: -306px;
+			bottom: 85px;
+		}
+	}
+	.container {
+		position: relative;
+	}
+}
