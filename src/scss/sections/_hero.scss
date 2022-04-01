@@ -14,7 +14,7 @@
 	}
 	&__header {
 		max-height: 95px;
-		background: #67aefc;
+		background: $blueColor;
 		@include for-size(phone) {
 			max-height: 49px;
 		}
@@ -67,7 +67,7 @@
 				padding-right: 285px;
 				@include for-size(tablet) {
 					display: flex;
-					padding-right: 75px;
+					padding-right: 80px;
 				}
 				@include for-size(phone) {
 					display: none;
@@ -207,7 +207,7 @@
 				padding: 9px 39px;
 				@include for-size(tablet) {
 					background: $whiteColor;
-					color: #67aefc;
+					color: $blueColor;
 				}
 			}
 		}
@@ -299,16 +299,16 @@
 		}
 		&__img-sphere1 {
 			position: absolute;
-			right: -36px;
-			bottom: 296px;
+			right: -30px;
+			bottom: 305px;
 			@include for-size(tablet) {
 				display: none;
 			}
 		}
 		&__img-sphere3 {
 			position: absolute;
-			right: -122px;
-			bottom: 370px;
+			right: -90px;
+			bottom: 380px;
 			@include for-size(tablet) {
 				display: none;
 			}
