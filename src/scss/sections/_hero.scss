@@ -379,7 +379,7 @@
 			bottom: 40px;
 			@include for-size(tablet) {
 				left: 0px;
-				bottom: 0px;
+				bottom: 15px;
 				max-width: 120px;
 			}
 			@include for-size(phone) {
