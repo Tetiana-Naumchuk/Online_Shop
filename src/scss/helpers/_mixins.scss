@@ -22,7 +22,7 @@
 
 @mixin for-size($size) {
 	@if $size == phone {
-		@media screen and (max-width: 320px) {
+		@media screen and (max-width: 375px) {
 			@content;
 		}
 	} @else if $size == tablet {

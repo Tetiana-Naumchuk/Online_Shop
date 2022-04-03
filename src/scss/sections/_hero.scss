@@ -28,6 +28,7 @@
 			&__right-figure {
 				@include for-size(phone) {
 					max-width: 21px;
+					margin-left: 12px;
 				}
 			}
 			&__right-quotes {
@@ -126,6 +127,7 @@
 				background-color: $whiteColor;
 				border-radius: 50%;
 				position: relative;
+				left: 45px;
 			}
 			.toggle::after {
 				content: '';
@@ -150,17 +152,18 @@
 			.menu {
 				&__list {
 					position: absolute;
-					right: -14px;
+					right: -55px;
 					top: 36px;
-					width: 250px;
+					width: 300px;
 					height: 270px;
 					background: rgba(103, 174, 252, 0.95);
 					z-index: 3;
 					display: none;
+					animation: 1s ease-in-out 0s alternate burger_mv;
 				}
 				&__list-is-active {
 					display: block;
-					transition-duration: 0.25s;
+					transition-duration: 0.5s;
 				}
 				&__item {
 					padding-top: 33px;
@@ -230,6 +233,7 @@
 			@include for-size(phone) {
 				margin-top: 337px;
 				font-size: 27px;
+				padding-left: 20px;
 			}
 		}
 		&__text {
@@ -242,6 +246,9 @@
 			color: #000000;
 			@include for-size(tablet) {
 				font-size: 14px;
+			}
+			@include for-size(phone) {
+				padding-left: 20px;
 			}
 		}
 		&__button {
@@ -403,5 +410,14 @@
 	}
 	.container {
 		position: relative;
+	}
+}
+
+@keyframes burger_mv {
+	0% {
+		right: 500px;
+	}
+	100% {
+		right: -55px;
 	}
 }
