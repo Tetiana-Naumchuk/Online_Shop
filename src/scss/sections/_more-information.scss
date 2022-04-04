@@ -63,9 +63,11 @@
 		}
 		.img-p-cylinder {
 			position: absolute;
-			right: -55px;
-			bottom: 201px;
+			// right: -55px;
+			// bottom: 201px;
 			width: 130px;
+			right: 0px;
+			bottom: 0px;
 		}
 		.img-lb-sphere {
 			position: absolute;
@@ -79,9 +81,11 @@
 		}
 		.img-taper {
 			position: absolute;
-			bottom: 304px;
-			right: -105px;
+			// bottom: 304px;
+			// right: -105px;
 			width: 65px;
+			top: 0px;
+			right: 0px;
 		}
 	}
 }
