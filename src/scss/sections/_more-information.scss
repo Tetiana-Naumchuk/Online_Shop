@@ -1,0 +1,85 @@
+.more-information {
+	background-color: $whiteColor;
+	.sphere-section-5 {
+		position: absolute;
+		top: 161px;
+		left: 177px;
+	}
+	&__wrapper {
+		padding-top: 214px;
+		display: flex;
+	}
+	&__info-block {
+		// margin-right: 117px;
+		.info-block-title {
+			padding-bottom: 53px;
+			@include repeat-title;
+			text-align: left;
+		}
+		.info-block-text {
+			padding-bottom: 45px;
+			font-weight: 400;
+			font-size: 18px;
+			line-height: 140%;
+			color: $blackColor;
+		}
+		.info-block-btn {
+			margin-bottom: 180px;
+			padding: 22px 56px;
+			background: $greenColor;
+			border: none;
+			font-family: $fontFamily;
+			font-weight: 700;
+			font-size: 15px;
+			line-height: 100%;
+			text-transform: uppercase;
+			color: $whiteColor;
+			border-radius: 5px;
+		}
+		.info-block-btn:hover {
+			border: 2px solid $blueColor;
+			border-radius: 5px;
+			padding: 20px 54px;
+			cursor: pointer;
+		}
+		.info-block-btn:active {
+			@include for-size(tablet) {
+				background: $whiteColor;
+				color: $blueColor;
+			}
+		}
+	}
+	&__img-block {
+		position: relative;
+		.img-clock {
+			position: absolute;
+			top: 0px;
+			left: -45px;
+		}
+		.img-v-wave {
+			position: absolute;
+			left: -110px;
+			bottom: 232px;
+		}
+		.img-p-cylinder {
+			position: absolute;
+			right: -55px;
+			bottom: 201px;
+		}
+		.img-lb-sphere {
+			position: absolute;
+			top: -90px;
+			right: 95px;
+		}
+		.img-p-sphere {
+			position: absolute;
+			top: -100px;
+			right: 16px;
+		}
+		.img-taper {
+			position: absolute;
+			bottom: 304px;
+			right: -166px;
+		}
+	}
+}
