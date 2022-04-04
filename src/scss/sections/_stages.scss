@@ -1,0 +1,391 @@
+.stages {
+	position: relative;
+	.stages-sphere {
+		position: absolute;
+		top: 129px;
+		left: 187px;
+		@include for-size(tablet) {
+			display: none;
+		}
+		@include for-size(phone) {
+			display: block;
+			width: 39px;
+			height: 39px;
+			top: 18px;
+			left: -18px;
+		}
+	}
+	.stages-wave {
+		position: absolute;
+		bottom: 47px;
+		right: 186px;
+		@include for-size(tablet) {
+			bottom: 30px;
+			right: 45px;
+		}
+		@include for-size(phone) {
+			display: none;
+		}
+	}
+	background: $whiteColor;
+	&__wrapper {
+	}
+	&__title {
+		padding-top: 123px;
+		padding-bottom: 84px;
+		@include for-size(tablet) {
+			padding-top: 84px;
+			padding-bottom: 44px;
+		}
+		@include for-size(phone) {
+			padding-top: 42px;
+			padding-bottom: 22px;
+		}
+	}
+	&__title-text {
+		@include repeat-title;
+		@include for-size(phone) {
+			font-size: 23px;
+		}
+	}
+	&__slider {
+		//overflow: hidden;
+		.slider-line {
+			@include flex;
+			//transition: all ease 1s;
+		}
+		.slider-block {
+			width: 707px;
+			height: 391px;
+			border: 2px solid #67aefc;
+			border-radius: 15px;
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			display: none;
+			// animation: 1s ease-in-out 0s alternate slider-right;
+			position: relative;
+			@include for-size(tablet) {
+				width: 607px;
+				height: 325px;
+			}
+			@include for-size(phone) {
+				grid-template-columns: 1fr;
+				width: 335px;
+				height: 615px;
+			}
+		}
+		.slider-block-active {
+			display: grid;
+		}
+		.block-info {
+			padding-left: 70px;
+			padding-top: 57px;
+			@include for-size(tablet) {
+				padding-left: 60px;
+				padding-top: 47px;
+			}
+			@include for-size(phone) {
+				padding-left: 33px;
+				padding-right: 29px;
+				padding-top: 27px;
+			}
+		}
+		.info-title {
+			padding-bottom: 21px;
+			font-family: $fontFamily;
+			font-weight: 700;
+			font-size: 21px;
+			line-height: 125%;
+			color: #000000;
+			@include for-size(tablet) {
+				font-size: 18px;
+			}
+			@include for-size(phone) {
+				font-size: 17px;
+			}
+		}
+		.info-text {
+			font-family: $fontFamily;
+			font-weight: 400;
+			font-size: 18px;
+			line-height: 140%;
+			color: #000000;
+			padding-bottom: 57px;
+			@include for-size(tablet) {
+				font-size: 16px;
+				padding-bottom: 47px;
+			}
+			@include for-size(phone) {
+				font-size: 17px;
+			}
+		}
+		span {
+			@include for-size(phone) {
+				display: none;
+			}
+		}
+		.block-img {
+			display: grid;
+			justify-content: center;
+			align-items: center;
+			position: relative;
+			z-index: 3;
+		}
+		.img {
+			@include for-size(phone) {
+				width: 220px;
+				margin-bottom: 55px;
+			}
+		}
+		.img-barcode-scan {
+			position: absolute;
+			top: 100px;
+			right: 142px;
+			@include for-size(tablet) {
+				top: 85px;
+				right: 110px;
+			}
+			@include for-size(phone) {
+				width: 114px;
+				top: 56px;
+				right: 149px;
+			}
+		}
+		.img-wave {
+			position: absolute;
+			top: 76px;
+			z-index: -1;
+			left: 213px;
+			@include for-size(tablet) {
+				top: 54px;
+				left: 194px;
+			}
+			@include for-size(phone) {
+				top: 7px;
+				left: 218px;
+				width: 96px;
+			}
+		}
+		.img-cylinder-blue {
+			position: absolute;
+			right: 50px;
+			bottom: 80px;
+			@include for-size(tablet) {
+				right: 23px;
+				bottom: 57px;
+			}
+			@include for-size(phone) {
+				bottom: 26px;
+				right: 54px;
+				width: 64px;
+			}
+		}
+		.img-cylinder-pink {
+			position: absolute;
+			left: 63px;
+			bottom: 68px;
+			@include for-size(tablet) {
+				left: 39px;
+				bottom: 47px;
+			}
+			@include for-size(phone) {
+				bottom: 19px;
+				left: 44px;
+				width: 63px;
+			}
+		}
+		.img-sphere {
+			position: absolute;
+			top: 40px;
+			left: 75px;
+			@include for-size(tablet) {
+				top: 24px;
+				left: 67px;
+			}
+			@include for-size(phone) {
+				top: 12px;
+				left: 90px;
+				width: 35px;
+			}
+		}
+		.img-sphere-little {
+			position: absolute;
+			top: 156px;
+			right: 37px;
+			@include for-size(tablet) {
+				top: 135px;
+				right: 20px;
+			}
+			@include for-size(phone) {
+				top: 80px;
+				right: 40px;
+				width: 16px;
+			}
+		}
+		.img-wallet {
+			@include for-size(phone) {
+				width: 130px;
+			}
+		}
+		.img-plus-big {
+			position: absolute;
+			bottom: 79px;
+			right: 66px;
+			@include for-size(tablet) {
+				right: 32px;
+			}
+			@include for-size(phone) {
+				right: 32px;
+				width: 83px;
+			}
+		}
+		.img-plus-little {
+			position: absolute;
+			top: 92px;
+			left: 93px;
+			@include for-size(tablet) {
+				top: 73px;
+			}
+			@include for-size(phone) {
+				top: 7px;
+				left: 76px;
+				width: 50px;
+			}
+		}
+		.img-deposit-big {
+			position: absolute;
+			bottom: 173px;
+			right: 56px;
+			@include for-size(tablet) {
+				bottom: 187px;
+			}
+			@include for-size(phone) {
+				bottom: 113px;
+				right: 41px;
+				width: 27px;
+			}
+		}
+		.img-deposit-little {
+			position: absolute;
+			bottom: 73px;
+			right: 151px;
+			@include for-size(tablet) {
+				right: 116px;
+			}
+			@include for-size(phone) {
+				bottom: 9px;
+				right: 102px;
+				width: 24px;
+			}
+		}
+		.img-wave-4 {
+			position: absolute;
+			bottom: 96px;
+			left: 46px;
+			@include for-size(tablet) {
+				bottom: 82px;
+			}
+			@include for-size(phone) {
+				bottom: 3px;
+				left: 50px;
+				width: 100px;
+			}
+		}
+		.img-sphere-pink-little {
+			position: absolute;
+			bottom: 160px;
+			left: 92px;
+			z-index: -1;
+			@include for-size(tablet) {
+				bottom: 156px;
+				left: 68px;
+			}
+			@include for-size(phone) {
+				bottom: 71px;
+				left: 83px;
+				width: 38px;
+			}
+		}
+		.cylinder-pink-5 {
+			position: absolute;
+			width: 87px;
+			top: 34px;
+			@include for-size(tablet) {
+				top: 17px;
+			}
+			@include for-size(phone) {
+				top: -16px;
+			}
+		}
+		.img-sphere-5 {
+			position: absolute;
+			width: 50px;
+			top: 108px;
+			left: 51px;
+			@include for-size(tablet) {
+				top: 84px;
+				left: 29px;
+			}
+			@include for-size(phone) {
+				top: 47px;
+			}
+		}
+	}
+	.slider-button {
+		padding-top: 84px;
+		padding-bottom: 128px;
+		@include flex;
+		@include for-size(tablet) {
+			padding-top: 64px;
+			padding-bottom: 108px;
+		}
+		@include for-size(phone) {
+			padding-top: 25px;
+			padding-bottom: 45px;
+		}
+	}
+	.btn-left {
+		width: 60px;
+		height: 60px;
+		border: 2px solid #67aefc;
+		border-radius: 15px;
+		background: $whiteColor;
+	}
+	.btn-left:hover {
+		background: $blueColor;
+		cursor: pointer;
+		@include for-size(tablet) {
+			background: $whiteColor;
+		}
+	}
+	.btn-right {
+		@extend .btn-left;
+		margin-left: 30px;
+		@include for-size(phone) {
+			margin-left: 107px;
+		}
+	}
+	.btn-right:hover {
+		background: $blueColor;
+		cursor: pointer;
+		@include for-size(tablet) {
+			background: $whiteColor;
+		}
+	}
+}
+@keyframes slider-right {
+	0% {
+		left: 500px;
+	}
+	100% {
+		left: -55px;
+	}
+}
+@keyframes slider-left {
+	0% {
+		right: 500px;
+	}
+	100% {
+		right: -55px;
+	}
+}

@@ -103,7 +103,6 @@
 			}
 			&__link {
 				font-family: $fontFamily;
-				font-style: normal;
 				font-weight: 600;
 				font-size: 16px;
 				line-height: 20px;
@@ -171,7 +170,6 @@
 				&__link {
 					@include flex;
 					font-family: $fontFamily;
-					font-style: normal;
 					font-weight: 800;
 					font-size: 17px;
 					line-height: 27px;
@@ -189,7 +187,6 @@
 			&__btn {
 				border: none;
 				font-family: $fontFamily;
-				font-style: normal;
 				font-weight: 700;
 				font-size: 15px;
 				text-transform: uppercase;
@@ -222,7 +219,6 @@
 		&__title {
 			margin-top: 171px;
 			font-family: $fontFamily;
-			font-style: normal;
 			font-weight: 900;
 			font-size: 50px;
 			line-height: 125%;
@@ -239,7 +235,6 @@
 		&__text {
 			margin-top: 20px;
 			font-family: $fontFamily;
-			font-style: normal;
 			font-weight: 400;
 			font-size: 16px;
 			line-height: 140%;
@@ -264,7 +259,6 @@
 			background: $greenColor;
 			border-radius: 5px;
 			font-family: $fontFamily;
-			font-style: normal;
 			font-weight: 700;
 			font-size: 15px;
 			text-transform: uppercase;
