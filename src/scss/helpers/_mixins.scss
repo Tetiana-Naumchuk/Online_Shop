@@ -20,6 +20,12 @@
 	padding: 20px 90px;
 }
 
+@mixin shop-example-hover {
+	display: flex;
+	transition: 0.7s;
+	cursor: pointer;
+}
+
 @mixin for-size($size) {
 	@if $size == phone {
 		@media screen and (max-width: 375px) {

@@ -1,0 +1,190 @@
+.shop-examples {
+	background: $blueBg;
+	position: relative;
+	.wave-section-4 {
+		position: absolute;
+		top: 275px;
+		left: 35px;
+		@include for-size(tablet) {
+			display: none;
+		}
+		@include for-size(phone) {
+			display: none;
+		}
+	}
+	.sphere-section-4 {
+		position: absolute;
+		bottom: 245px;
+		right: 110px;
+		@include for-size(tablet) {
+			display: none;
+		}
+		@include for-size(phone) {
+			display: none;
+		}
+	}
+	&__title {
+		padding-top: 121px;
+		padding-bottom: 51px;
+		@include for-size(tablet) {
+			padding-top: 101px;
+			padding-bottom: 31px;
+		}
+		@include for-size(phone) {
+			padding-top: 23px;
+			padding-bottom: 14px;
+		}
+	}
+	&__title-text {
+		@include repeat-title;
+		@include for-size(phone) {
+			font-size: 23px;
+		}
+	}
+	&__wrapper {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		column-gap: 33px;
+		row-gap: 38px;
+		padding-bottom: 121px;
+		@include for-size(tablet) {
+			padding-bottom: 101px;
+			gap: 23px;
+		}
+		@include for-size(phone) {
+			grid-template-columns: 1fr;
+			row-gap: 15px;
+			padding-bottom: 30px;
+		}
+		.shop-1,
+		.shop-2,
+		.shop-3,
+		.shop-4,
+		.shop-5,
+		.shop-6 {
+			position: relative;
+			@include for-size(phone) {
+				display: grid;
+				justify-content: center;
+			}
+		}
+		.shop-img-1,
+		.shop-img-2,
+		.shop-img-3,
+		.shop-img-4,
+		.shop-img-5,
+		.shop-img-6 {
+			width: 570px;
+			height: 447px;
+			border-radius: 15px;
+			@include for-size(tablet) {
+				width: 367px;
+				height: 244px;
+			}
+			@include for-size(phone) {
+				width: 335px;
+				height: 260px;
+			}
+		}
+		.shop-hover-1,
+		.shop-hover-2,
+		.shop-hover-3,
+		.shop-hover-4,
+		.shop-hover-5,
+		.shop-hover-6 {
+			width: 570px;
+			height: 447px;
+			background: $blueColor;
+			border-radius: 15px;
+			@include flex;
+			color: $whiteColor;
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: none;
+			@include for-size(tablet) {
+				width: 367px;
+				height: 244px;
+			}
+			@include for-size(phone) {
+				width: 335px;
+				height: 260px;
+				left: 15px;
+			}
+		}
+		.shop-1:hover .shop-hover-1 {
+			@include shop-example-hover;
+		}
+		.shop-2:hover .shop-hover-2 {
+			@include shop-example-hover;
+		}
+		.shop-3:hover .shop-hover-3 {
+			@include shop-example-hover;
+		}
+		.shop-4:hover .shop-hover-4 {
+			@include shop-example-hover;
+		}
+		.shop-5:hover .shop-hover-5 {
+			@include shop-example-hover;
+		}
+		.shop-6:hover .shop-hover-6 {
+			@include shop-example-hover;
+		}
+		.shop-hover-text {
+			text-align: center;
+		}
+		.hover-title {
+			font-weight: 700;
+			font-size: 21px;
+			line-height: 125%;
+			@include for-size(phone) {
+				font-weight: 800;
+				font-size: 17px;
+				line-height: 27px;
+				text-transform: uppercase;
+			}
+		}
+		.hover-subtitle {
+			font-weight: 400;
+			font-size: 18px;
+			line-height: 175%;
+			@include for-size(phone) {
+				font-size: 17px;
+			}
+		}
+		.visible-mob {
+			display: grid;
+		}
+		.unvisible-mob {
+			@include for-size(phone) {
+				display: none;
+			}
+		}
+		.mob-button {
+			padding-top: 30px;
+			padding-bottom: 30px;
+			@include flex;
+			display: none;
+			@include for-size(phone) {
+				display: flex;
+			}
+		}
+		.next-btn {
+			width: 60px;
+			height: 60px;
+			border: 2px solid #67aefc;
+			border-radius: 15px;
+			background: $blueBg;
+		}
+		.next-btn:active {
+			background: $blueColor;
+		}
+		.prev-btn {
+			@extend .next-btn;
+			margin-left: 107px;
+		}
+		.prev-btn:active {
+			background: $blueColor;
+		}
+	}
+}

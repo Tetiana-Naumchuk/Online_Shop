@@ -1,3 +1,4 @@
+//burger-menu section hero--->
 const toggleMenu = document.querySelector('.toggle');
 const menu = document.querySelector('.menu__list');
 toggleMenu.addEventListener('click', toggleFunction);
@@ -5,6 +6,7 @@ function toggleFunction() {
 	if (this) menu.classList.toggle('menu__list-is-active');
 }
 
+//visible content section structure--->
 const selectedSructure = document.querySelectorAll('.active');
 const targetItem = document.querySelectorAll('.item');
 targetItem.forEach(elem => {
@@ -18,6 +20,7 @@ function selectContent() {
 	});
 }
 
+//slider section stages--->
 const sliderBlock = document.querySelectorAll('.slider-block');
 let count = 0;
 document.querySelector('.btn-right').addEventListener('click', e => {
@@ -44,3 +47,14 @@ function activeBlock() {
 	});
 	sliderBlock[count].classList.add('slider-block-active');
 }
+
+//change img section shop-examples mob-version--->
+const shopExamples = document.querySelectorAll('.shop');
+function changeShopExamples(event) {
+	let target = event.target;
+	shopExamples.forEach(elem => {
+		elem.classList.toggle('unvisible-mob');
+		elem.style.cssText = `transition: 0.7s`;
+	});
+}
+document.querySelector('.mob-button').addEventListener('click', changeShopExamples);

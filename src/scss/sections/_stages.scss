@@ -1,5 +1,6 @@
 .stages {
 	position: relative;
+	overflow: hidden;
 	.stages-sphere {
 		position: absolute;
 		top: 129px;
@@ -28,8 +29,6 @@
 		}
 	}
 	background: $whiteColor;
-	&__wrapper {
-	}
 	&__title {
 		padding-top: 123px;
 		padding-bottom: 84px;
@@ -354,6 +353,7 @@
 	.btn-left:hover {
 		background: $blueColor;
 		cursor: pointer;
+		transition: 0.8s;
 		@include for-size(tablet) {
 			background: $whiteColor;
 		}
@@ -368,6 +368,7 @@
 	.btn-right:hover {
 		background: $blueColor;
 		cursor: pointer;
+		transition: 0.8s;
 		@include for-size(tablet) {
 			background: $whiteColor;
 		}
@@ -375,7 +376,7 @@
 }
 @keyframes slider-right {
 	0% {
-		left: 500px;
+		left: 600px;
 	}
 	100% {
 		left: -55px;
@@ -383,7 +384,7 @@
 }
 @keyframes slider-left {
 	0% {
-		right: 500px;
+		right: 600px;
 	}
 	100% {
 		right: -55px;
