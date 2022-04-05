@@ -240,10 +240,10 @@
 			line-height: 140%;
 			color: #000000;
 			@include for-size(tablet) {
-				font-size: 14px;
+				font-size: 16px;
 			}
 			@include for-size(phone) {
-				padding-left: 20px;
+				padding-inline: 20px;
 			}
 		}
 		&__button {
@@ -282,7 +282,7 @@
 			max-width: 509px;
 			z-index: 1;
 			@include for-size(tablet) {
-				max-width: 350px;
+				max-width: 320px;
 				top: 20px;
 			}
 			@include for-size(phone) {

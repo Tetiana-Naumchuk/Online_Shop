@@ -20,7 +20,11 @@
 			display: none;
 		}
 		@include for-size(phone) {
-			display: none;
+			display: block;
+			bottom: -19px;
+			right: 30px;
+			width: 39px;
+			z-index: 3;
 		}
 	}
 	&__title {

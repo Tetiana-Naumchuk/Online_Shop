@@ -48,7 +48,6 @@
 		}
 	}
 	&__slider {
-		//overflow: hidden;
 		.slider-line {
 			@include flex;
 			//transition: all ease 1s;
@@ -358,6 +357,10 @@
 			background: $whiteColor;
 		}
 	}
+	.btn-left:active {
+		background: $blueColor;
+	}
+
 	.btn-right {
 		@extend .btn-left;
 		margin-left: 30px;
@@ -372,6 +375,9 @@
 		@include for-size(tablet) {
 			background: $whiteColor;
 		}
+	}
+	.btn-right:active {
+		background: $blueColor;
 	}
 }
 @keyframes slider-right {

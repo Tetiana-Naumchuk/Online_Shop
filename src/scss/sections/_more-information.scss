@@ -1,20 +1,88 @@
 .more-information {
 	background-color: $whiteColor;
+	position: relative;
+	.title-mob-v {
+		display: none;
+		@include for-size(phone) {
+			display: block;
+			@include repeat-title;
+			font-size: 23px;
+			padding-top: 43px;
+		}
+	}
 	.sphere-section-5 {
 		position: absolute;
 		top: 161px;
 		left: 177px;
+		@include for-size(tablet) {
+			top: 26px;
+			left: 30px;
+		}
+		@include for-size(tablet) {
+			display: none;
+		}
+	}
+	.img-taper {
+		position: absolute;
+		top: 320px;
+		right: 195px;
+		@include for-size(tablet) {
+			width: 65px;
+			top: 214px;
+			right: 40px;
+		}
+		@include for-size(phone) {
+			width: 27px;
+			right: 38px;
+			top: 215px;
+		}
+	}
+	.img-p-cylinder {
+		position: absolute;
+		right: 308px;
+		bottom: 183px;
+		z-index: 2;
+		@include for-size(tablet) {
+			width: 150px;
+			right: 0px;
+			bottom: 331px;
+		}
+		@include for-size(phone) {
+			width: 95px;
+			right: 94px;
+			top: 245px;
+		}
 	}
 	&__wrapper {
 		padding-top: 214px;
 		display: flex;
+		@include for-size(tablet) {
+			padding-top: 160px;
+		}
+		@include for-size(phone) {
+			padding-top: 43px;
+			flex-wrap: wrap-reverse;
+		}
 	}
 	&__info-block {
-		// margin-right: 117px;
+		margin-right: 117px;
+		@include for-size(tablet) {
+			margin-right: 30px;
+		}
+		@include for-size(phone) {
+			margin-left: 11px;
+			margin-top: 29px;
+		}
 		.info-block-title {
 			padding-bottom: 53px;
 			@include repeat-title;
 			text-align: left;
+			@include for-size(tablet) {
+				padding-bottom: 33px;
+			}
+			@include for-size(phone) {
+				display: none;
+			}
 		}
 		.info-block-text {
 			padding-bottom: 45px;
@@ -22,6 +90,13 @@
 			font-size: 18px;
 			line-height: 140%;
 			color: $blackColor;
+			@include for-size(tablet) {
+				padding-bottom: 35px;
+			}
+			@include for-size(phone) {
+				font-size: 17px;
+				line-height: 175%;
+			}
 		}
 		.info-block-btn {
 			margin-bottom: 180px;
@@ -35,6 +110,10 @@
 			text-transform: uppercase;
 			color: $whiteColor;
 			border-radius: 5px;
+			@include for-size(phone) {
+				width: 334px;
+				margin-bottom: 50px;
+			}
 		}
 		.info-block-btn:hover {
 			border: 2px solid $blueColor;
@@ -51,41 +130,66 @@
 	}
 	&__img-block {
 		position: relative;
+		.img-order {
+			position: relative;
+			z-index: 1;
+			width: 380px;
+			@include for-size(tablet) {
+				width: 320px;
+			}
+			@include for-size(phone) {
+				width: 190px;
+				left: 75px;
+			}
+		}
 		.img-clock {
 			position: absolute;
 			top: 0px;
 			left: -45px;
+			@include for-size(tablet) {
+				width: 110px;
+			}
+			@include for-size(phone) {
+				width: 49px;
+				top: 15px;
+				left: 63px;
+			}
 		}
 		.img-v-wave {
 			position: absolute;
 			left: -110px;
 			bottom: 232px;
-		}
-		.img-p-cylinder {
-			position: absolute;
-			// right: -55px;
-			// bottom: 201px;
-			width: 130px;
-			right: 0px;
-			bottom: 0px;
+			@include for-size(tablet) {
+				width: 130px;
+				left: -61px;
+				bottom: 336px;
+				z-index: 2;
+			}
+			@include for-size(phone) {
+				display: none;
+			}
 		}
 		.img-lb-sphere {
 			position: absolute;
 			top: -90px;
 			right: 95px;
+			@include for-size(phone) {
+				width: 9px;
+				top: -2px;
+				right: -27px;
+				z-index: 0;
+			}
 		}
 		.img-p-sphere {
 			position: absolute;
 			top: -100px;
 			right: 16px;
-		}
-		.img-taper {
-			position: absolute;
-			// bottom: 304px;
-			// right: -105px;
-			width: 65px;
-			top: 0px;
-			right: 0px;
+			@include for-size(phone) {
+				width: 19px;
+				top: -9px;
+				right: -54px;
+				z-index: 0;
+			}
 		}
 	}
 }
