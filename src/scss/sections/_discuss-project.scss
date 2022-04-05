@@ -1,0 +1,180 @@
+.discuss-project {
+	background: $blueBg;
+	position: relative;
+	.phone-call {
+		position: absolute;
+		top: 242px;
+		left: 180px;
+		@include for-size(tablet) {
+			width: 225px;
+			top: 0px;
+			left: 0px;
+		}
+		@include for-size(phone) {
+			display: none;
+		}
+	}
+	&__wrapper {
+		padding-top: 180px;
+		position: relative;
+		@include for-size(tablet) {
+			padding-top: 140px;
+		}
+		@include for-size(phone) {
+			padding-top: 42px;
+		}
+		.wave-violet-5 {
+			position: absolute;
+			top: 259px;
+			right: 0px;
+			@include for-size(tablet) {
+				width: 148px;
+			}
+			@include for-size(phone) {
+				display: none;
+			}
+		}
+		.shape-5 {
+			position: absolute;
+			top: 338px;
+			right: 0px;
+			@include for-size(tablet) {
+				width: 50px;
+				top: 318px;
+				right: 15px;
+			}
+			@include for-size(phone) {
+				display: none;
+			}
+		}
+	}
+	&__title {
+		@include repeat-title;
+		padding-bottom: 20px;
+		@include for-size(phone) {
+			font-size: 23px;
+		}
+	}
+	&__text {
+		font-family: $fontFamily;
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 175%;
+		text-align: center;
+		color: $blackColor;
+		padding-bottom: 27px;
+		@include for-size(phone) {
+			font-size: 17px;
+			padding-bottom: 25px;
+		}
+	}
+	br {
+		@include for-size(phone) {
+			display: none;
+		}
+	}
+	&__form-wrapper {
+		@include flex;
+		@include for-size(phone) {
+		}
+	}
+	.form {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 20px;
+		@include for-size(phone) {
+			gap: 10px;
+		}
+	}
+	.form-field {
+		width: 470px;
+		background: $whiteColor;
+		border: 1px solid #6eb1fb;
+		border-radius: 10px;
+		padding-top: 19px;
+		padding-bottom: 19px;
+		padding-left: 14px;
+		font-family: $fontFamily;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 20px;
+		color: #939393;
+		@include for-size(phone) {
+			width: 335px;
+		}
+	}
+	.form-field:focus {
+		border: 2px solid $blueColor;
+	}
+	.error {
+		border: 2px solid red;
+	}
+	.unvalid {
+		font-family: $fontFamily;
+		font-weight: 700;
+		font-size: 16px;
+		color: red;
+		display: none;
+	}
+	.form-button {
+		@include flex;
+		padding-bottom: 128px;
+		margin-top: 10px;
+		@include for-size(tablet) {
+			padding-bottom: 88px;
+		}
+	}
+	.form-button-btn {
+		border: none;
+		padding: 23px 84px;
+		background: $greenColor;
+		font-family: $fontFamily;
+		font-weight: 700;
+		font-size: 15px;
+		line-height: 100%;
+		text-transform: uppercase;
+		color: #f9f9f9;
+		border-radius: 5px;
+		@include for-size(phone) {
+			width: 335px;
+		}
+	}
+	.form-button-btn:hover {
+		@include hover-btn;
+		padding: 21px 82px;
+		@include for-size(tablet) {
+			border: none;
+		}
+	}
+	.form-button-btn:active {
+		@include for-size(tablet) {
+			background: #67aefc;
+		}
+	}
+	.block-img-mob {
+		display: none;
+		@include for-size(phone) {
+			display: block;
+			position: relative;
+			padding-bottom: 74px;
+		}
+	}
+	.mob-charge-mob {
+		transform: translateX(50%);
+		margin-top: -44px;
+	}
+	.phone-call-mob {
+		position: absolute;
+		bottom: 30px;
+	}
+	.sphere-mob-5 {
+		position: absolute;
+		top: 12px;
+		left: 70px;
+	}
+	.sphere-violet-5 {
+		position: absolute;
+		top: 0px;
+		right: 75px;
+	}
+}

@@ -58,3 +58,24 @@ function changeShopExamples(event) {
 	});
 }
 document.querySelector('.mob-button').addEventListener('click', changeShopExamples);
+
+//validate form section discuss project
+const input = document.querySelectorAll('.form-field');
+const tel = document.querySelector('.tel');
+function validate(event) {
+	for (let item of input) {
+		if (item.value === '') {
+			item.classList.add('error');
+		} else {
+			item.classList.remove('error');
+		}
+	}
+	let telError = +tel.value;
+	if (!telError) {
+		tel.classList.add('error');
+		document.querySelector('.unvalid').style.display = 'block';
+	} else {
+		tel.classList.remove('error');
+	}
+}
+document.querySelector('.form-button-btn').addEventListener('click', validate);
