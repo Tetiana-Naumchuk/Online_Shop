@@ -1,0 +1,135 @@
+.footer {
+	background: #64abf9;
+	&__wrapper {
+		padding-top: 101px;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-areas:
+			'item1 item2 item3'
+			'item4 item4 item4';
+		@include for-size(tablet) {
+			padding-top: 80px;
+			grid-template-columns: 1fr;
+			grid-template-areas:
+				'item1 item2 item2'
+				'item4 item4 item3';
+		}
+		@include for-size(phone) {
+			padding-top: 115px;
+			padding-left: 46px;
+			grid-template-columns: 1fr;
+			grid-template-areas:
+				'item1 item1 item1'
+				'item2 item2 item2'
+				'item4 item4 item4'
+				'item3 item3 item3';
+		}
+		.logo-block {
+			@include flex($horizontal: flex-start);
+			grid-area: item1;
+			margin-top: -75px;
+			.logo-figure-wrapper {
+				@include flex($horizontal: flex-start, $vertical: flex-start);
+				@include for-size(phone) {
+					margin-bottom: 28px;
+				}
+			}
+			.logo {
+				&__right {
+					position: relative;
+				}
+				&__right-quotes {
+					position: absolute;
+					right: 18px;
+					bottom: 10px;
+				}
+				&__left {
+					position: relative;
+					margin-right: 6px;
+					margin-top: -18px;
+				}
+				&__left-figure {
+					padding-top: 30px;
+					margin-left: -10px;
+				}
+				&__left-quotes {
+					position: absolute;
+					left: 10px;
+					bottom: 10px;
+				}
+				&__text {
+					.letter {
+						padding-right: 6px;
+					}
+				}
+			}
+		}
+		.contacts-block {
+			grid-area: item2;
+			@include for-size(phone) {
+				margin-bottom: 60px;
+			}
+			&__wrapper {
+				display: flex;
+				.img {
+					font-size: 22px;
+					color: $whiteColor;
+					padding-right: 10px;
+				}
+				.text {
+					font-family: $fontFamily;
+					font-weight: 400;
+					font-size: 20px;
+					line-height: 24px;
+					color: $whiteColor;
+					padding-bottom: 10px;
+					@include for-size(phone) {
+						font-size: 16px;
+					}
+				}
+			}
+		}
+		.social-network-block {
+			grid-area: item4;
+			@include for-size(phone) {
+				margin-bottom: 50px;
+			}
+			.network-img {
+				font-size: 25px;
+				color: $whiteColor;
+				padding-right: 38px;
+				@include for-size(phone) {
+					padding-right: 25px;
+				}
+			}
+		}
+		.email-block {
+			grid-area: item3;
+			.text {
+				font-family: $fontFamily;
+				font-weight: 400;
+				font-size: 20px;
+				line-height: 24px;
+				color: $whiteColor;
+			}
+		}
+	}
+	.copyright-text {
+		font-family: $whiteColor;
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 175%;
+		color: $whiteColor;
+		text-align: center;
+		padding-top: 120px;
+		padding-bottom: 79px;
+		@include for-size(tablet) {
+			padding-top: 80px;
+		}
+		@include for-size(phone) {
+			font-size: 14px;
+			padding-top: 23px;
+			padding-bottom: 130px;
+		}
+	}
+}

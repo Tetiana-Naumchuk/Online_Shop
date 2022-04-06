@@ -59,7 +59,7 @@ function changeShopExamples(event) {
 }
 document.querySelector('.mob-button').addEventListener('click', changeShopExamples);
 
-//validate form section discuss project
+//validate form section discuss project--->
 const input = document.querySelectorAll('.form-field');
 const tel = document.querySelector('.tel');
 function validate(event) {
